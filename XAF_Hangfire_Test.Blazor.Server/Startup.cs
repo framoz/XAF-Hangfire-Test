@@ -20,7 +20,15 @@ using DevExpress.ExpressApp.Security.Authentication;
 using DevExpress.ExpressApp.Security.Authentication.ClientServer;
 using DevExpress.ExpressApp.Core;
 using DevExpress.ExpressApp;
+using Xpand.Extensions.Blazor;
+using Xpand.XAF.Modules.JobScheduler.Hangfire.Hangfire;
+using Hangfire;
 
+
+
+[assembly: HostingStartup(typeof(HangfireStartup))]
+[assembly: HostingStartup(typeof(HostingStartup))]
+[assembly: HostingStartup(typeof(Xpand.XAF.Modules.Blazor.BlazorStartup))]
 
 namespace XAF_Hangfire_Test.Blazor.Server;
 
@@ -34,6 +42,10 @@ public class Startup {
     // This method gets called by the runtime. Use this method to add services to the container.
     // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
     public void ConfigureServices(IServiceCollection services) {
+
+        services.AddHangfire(x => x.UseSqlServerStorage(@"Data Source=DESKTOP-8U4LIBF;Initial Catalog=hangfire-webapi-db;Integrated Security=True;Pooling=False"));
+        services.AddHangfireServer();
+        
         services.AddSingleton(typeof(Microsoft.AspNetCore.SignalR.HubConnectionHandler<>), typeof(ProxyHubConnectionHandler<>));
 
      //   RequiredModuleTypes.Add(typeof(Xpand.XAF.Modules.JobScheduler.Notification.JobSchedulerNotificationModule));

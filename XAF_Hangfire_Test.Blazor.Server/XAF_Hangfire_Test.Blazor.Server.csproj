@@ -27,6 +27,7 @@
     <PackageReference Include="DevExpress.ExpressApp.Validation.Blazor" Version="22.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="22.1.6" />
     <PackageReference Include="Fasterflect.Xpand" Version="2.0.7" />
+    <PackageReference Include="Hangfire" Version="1.7.31" />
     <PackageReference Include="Hangfire.AspNetCore" Version="1.7.31" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.1.4" />
