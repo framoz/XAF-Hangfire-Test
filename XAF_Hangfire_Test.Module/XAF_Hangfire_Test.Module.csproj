@@ -16,6 +16,7 @@
   <ItemGroup>
     <PackageReference Include="DevExpress.ExpressApp" Version="22.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="22.1.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Blazor" Version="22.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.CloneObject.Xpo" Version="22.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="22.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="22.1.6" />
@@ -30,7 +31,16 @@
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="22.1.6" />
     <PackageReference Include="DevExpress.Persistent.Base" Version="22.1.6" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="22.1.6" />
+    <PackageReference Include="Fasterflect.Xpand" Version="2.0.7" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.31" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+    <PackageReference Include="Xpand.Extensions" Version="4.221.11" />
+    <PackageReference Include="Xpand.Extensions.Reactive" Version="4.221.11" />
+    <PackageReference Include="Xpand.Extensions.XAF" Version="4.221.11" />
+    <PackageReference Include="Xpand.Patcher" Version="3.0.17" />
+    <PackageReference Include="Xpand.VersionConverter" Version="4.221.11" />
     <PackageReference Include="Xpand.XAF.Modules.JobScheduler.Hangfire" Version="4.221.11" />
     <PackageReference Include="Xpand.XAF.Modules.JobScheduler.Notification" Version="4.221.11" />
+    <PackageReference Include="Xpand.XAF.Modules.Reactive" Version="4.221.11" />
   </ItemGroup>
 </Project>

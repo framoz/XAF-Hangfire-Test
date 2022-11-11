@@ -77,7 +77,9 @@ public class Startup {
                 .Add<XAF_Hangfire_Test.Module.XAF_Hangfire_TestModule>()
                 .Add<XAF_Hangfire_TestBlazorModule>()
                 .Add<Xpand.XAF.Modules.JobScheduler.Hangfire.JobSchedulerModule>()
-                .Add<Xpand.XAF.Modules.JobScheduler.Notification.JobSchedulerNotificationModule>();
+                .Add<Xpand.XAF.Modules.JobScheduler.Hangfire.Notification.JobSchedulerNotificationModule>()
+                .Add<Xpand.XAF.Modules.Blazor.BlazorModule>()
+                .Add<Xpand.XAF.Modules.Reactive.ReactiveModule>();            
             builder.ObjectSpaceProviders
                 .AddSecuredXpo((serviceProvider, options) => {
                     string connectionString = null;
