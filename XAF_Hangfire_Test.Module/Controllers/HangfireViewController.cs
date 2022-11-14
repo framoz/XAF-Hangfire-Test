@@ -70,7 +70,7 @@ namespace XAF_Hangfire_Test.Module.Controllers
             Company newPerson = this.ObjectSpace.CreateObject<Company>();
             newPerson.Age = 2;
             newPerson.Nomezinho = "Teste";
-            newPerson.ValidUntil = DateTime.Now;
+            newPerson.ValidUntill = DateTime.Now;
 
             newPerson.Save();
 

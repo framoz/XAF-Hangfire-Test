@@ -43,10 +43,10 @@ public sealed class XAF_Hangfire_TestModule : ModuleBase
         RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.StateMachine.StateMachineModule));
         RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Validation.ValidationModule));
         RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule));
-        RequiredModuleTypes.Add(typeof(Xpand.XAF.Modules.JobScheduler.Hangfire.Notification.JobSchedulerNotificationModule));
-        RequiredModuleTypes.Add(typeof(Xpand.XAF.Modules.JobScheduler.Hangfire.JobSchedulerModule));
+       // RequiredModuleTypes.Add(typeof(Xpand.XAF.Modules.JobScheduler.Hangfire.Notification.JobSchedulerNotificationModule));
+     //   RequiredModuleTypes.Add(typeof(Xpand.XAF.Modules.JobScheduler.Hangfire.JobSchedulerModule));
       //  RequiredModuleTypes.Add(typeof(Xpand.XAF.Modules.Blazor.BlazorModule));
-        RequiredModuleTypes.Add(typeof(Xpand.XAF.Modules.Reactive.ReactiveModule));
+   //     RequiredModuleTypes.Add(typeof(Xpand.XAF.Modules.Reactive.ReactiveModule));
        
 
 

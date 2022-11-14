@@ -162,7 +162,7 @@ public class Startup {
                     .AddRouteComponents("api/odata", new EdmModelBuilder(serviceProvider).GetEdmModel())
                     .EnableQueryFeatures(100);
             });
-
+        
         services.AddSwaggerGen(c => {
             c.EnableAnnotations();
             c.SwaggerDoc("v1", new OpenApiInfo {

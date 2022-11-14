@@ -39,16 +39,16 @@ namespace XAF_Hangfire_Test.Module.BusinessObjects
 
         public int Age { get; set; }
 
-        private System.DateTime _validUntil;
+        private System.DateTime _validUntill;
         /// <summary>
         /// ValidUntil
         /// </summary>
         [ModelDefault("DisplayFormat", "{0:g}")]
         [ModelDefault("EditMask", "g")]
-        public System.DateTime ValidUntil
+        public System.DateTime ValidUntill
         {
-            get { return _validUntil; }
-            set { SetPropertyValue("ValidUntil", ref _validUntil, value); }
+            get { return _validUntill; }
+            set { SetPropertyValue("ValidUntill", ref _validUntill, value); }
         }
         public string Nomezinho { get; set; }
 
