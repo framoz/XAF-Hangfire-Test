@@ -6,15 +6,18 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
+using Hangfire.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using Xpand.XAF.Modules.JobScheduler.Hangfire;
 
 namespace XAF_Hangfire_Test.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [JobProvider]
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
@@ -36,8 +39,19 @@ namespace XAF_Hangfire_Test.Module.BusinessObjects
 
         public int Age { get; set; }
 
-        public DateTime Birthday { get; set; }
+        private System.DateTime _validUntil;
+        /// <summary>
+        /// ValidUntil
+        /// </summary>
+        [ModelDefault("DisplayFormat", "{0:g}")]
+        [ModelDefault("EditMask", "g")]
+        public System.DateTime ValidUntil
+        {
+            get { return _validUntil; }
+            set { SetPropertyValue("ValidUntil", ref _validUntil, value); }
+        }
+        public string Nomezinho { get; set; }
 
-        public string Name { get; set; }
+        public Job NewJob { get; set; }
     }
 }
